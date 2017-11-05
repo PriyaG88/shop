@@ -1,0 +1,24 @@
+.logo {
+  font-family: 'Anton', sans-serif;
+  font-size: 30px;
+}
+
+.new-arrivals-banner {
+  height: 340px;
+  width: 800px;
+  background-image: url('newarrivals-banner.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  align-self: center;
+  margin-top: 50px;
+  margin-left: 150px;
+  border: 15px solid black;
+}
+
+.accessories-banner {
+  height: 200px;
+  width: 450px;
+  background-image: url('acc-banner.jpg');
+  margin-left: 125px;
+  margin-top: 20px;
+}

@@ -1,8 +1,9 @@
 import React from 'react';
+import HomePage from './home';
 
 const App = () => {
   return (
-    <h1>SHOP</h1>
+    <HomePage />
   );
 };
 
