@@ -1,9 +1,11 @@
 .logo {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 30px;
+  color: black;
 }
 
 .header-nav {
+  background-color: white;
 }
 
 .nav-links {
@@ -11,6 +13,7 @@
   font-family: 'Oswald', sans-serif;
   padding: 10px;
 }
+
 
 .category-links {
   text-decoration: none;
