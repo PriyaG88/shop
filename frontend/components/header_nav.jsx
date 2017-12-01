@@ -19,7 +19,7 @@ class HeaderNav extends Component {
           <a className='category-links' href='#'>Apparel</a>
           <a className='category-links' href='#'>Footwear</a>
           <a className='category-links' href='#'>Accessories</a>
-          <a className='session-form-link category-links' href='#'>Login/Sign up</a>
+          <a className='session-form-link category-links' href='/#/login'>Login/Sign up</a>
         </div>
       </Navbar>
     );
