@@ -1,14 +1,14 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
+import HeaderNav from './header_nav';
 import HomePage from './home';
-import SessionFormContainer from './session_form_container';
+
 
 const App = () => {
   return (
     <div>
+      <HeaderNav />
       <HomePage />
-      <Route path="/login" component={SessionFormContainer} />
-      <Route path="/signup" component={SessionFormContainer} />
     </div>
   );
 };

@@ -14,16 +14,12 @@
   padding: 10px;
 }
 
-.category-links {
+.category-links, .session-form-link {
   text-decoration: none;
   padding: 10px;
   color: black;
   text-transform: uppercase;
   font-size: 15px;
-}
-
-.session-form-link {
-  float: right;
 }
 
 .category-links:visited {

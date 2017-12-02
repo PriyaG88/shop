@@ -1,10 +1,8 @@
 import React from 'react';
-import HeaderNav from './header_nav';
 
 const HomePage = () => {
   return (
     <div className='homepage-container'>
-      <HeaderNav />
       <div className='new-arrivals-container'>
         <div className='new-arrivals-banner' />
       </div>

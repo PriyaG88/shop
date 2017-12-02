@@ -1,10 +1,26 @@
 import React, { Component } from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import { Navbar, Nav, Modal, Button } from 'react-bootstrap';
 import { Link } from 'react-router';
+import SessionModal from './session_modal';
+import { logout } from '../actions/session_actions';
 
 class HeaderNav extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      loggedIn: this.props.loggedIn
+    };
+  }
+
+  handleLogout(e) {
+    e.preventDefault();
+    this.props.logout();
+    this.setState({ loggedIn: false });
+  }
+
+  handleLogin(e) {
+    this.setState({ loggedIn: true });
   }
 
   render() {
@@ -19,11 +35,23 @@ class HeaderNav extends Component {
           <a className='category-links' href='#'>Apparel</a>
           <a className='category-links' href='#'>Footwear</a>
           <a className='category-links' href='#'>Accessories</a>
-          <a className='session-form-link category-links' href='/#/login'>Login/Sign up</a>
+          <Nav pullRight>
+            {this.state.loggedIn ? <Button onClick={this.handleLogout.bind(this)}>Log Out</Button>
+          : <Button><SessionModal handleLogin={this.handleLogin.bind(this)}/></Button>
+            }
+          </Nav>
         </div>
       </Navbar>
     );
   }
 }
 
-export default HeaderNav;
+const mapStateToProps = state => ({
+  loggedIn: Boolean(state.session.currentUser)
+});
+
+const mapDispatchToProps = dispatch => ({
+  logout: () => dispatch(logout())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(HeaderNav);
