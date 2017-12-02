@@ -49,7 +49,8 @@ class SessionModal extends Component {
 
         <Modal show={this.state.showModal} onHide={this.close.bind(this)}>
           <Modal.Header closeButton>
-            <Modal.Title className="modal-title">Your Account for everything Style</Modal.Title>
+            <h2 className="modal-title">theShop</h2>
+            <Modal.Title className="modal-slogan">Your Account for everything Style</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <Row>

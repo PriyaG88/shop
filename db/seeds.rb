@@ -6,3 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.create(email: 'priyaprograms@gmail.com', password: 'password', first_name: 'Priya', last_name: 'Gurung')
+
+Category.create(name: 'Footwear')
+
+Product.create(category_id: 1, image_url: '../../app/assets/images/nike.jpg', title: 'Blazers', price: 98)
