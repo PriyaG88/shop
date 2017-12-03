@@ -35,6 +35,7 @@ class HeaderNav extends Component {
           <a className='category-links' href='#'>Apparel</a>
           <a className='category-links' href='#'>Footwear</a>
           <a className='category-links' href='#'>Accessories</a>
+          <a className='category-links' href='#'>All</a>
           <Nav pullRight>
             {this.state.loggedIn ? <Button onClick={this.handleLogout.bind(this)}>Log Out</Button>
           : <Button><SessionModal handleLogin={this.handleLogin.bind(this)}/></Button>
