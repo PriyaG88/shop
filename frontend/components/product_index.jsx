@@ -9,10 +9,19 @@ class ProductIndex extends Component {
     this.props.fetchProducts();
   }
 
+  renderProduct() {
+    return this.props.products.map(product => (
+      <img key={product.title} src={product.image_url}></img>
+    ));
+
+  }
+
   render() {
-    console.log(this.props.products);
+    const productImages = this.renderProduct();
     return (
-      <div>...</div>
+      <div>
+        {productImages}
+      </div>
     );
   }
 }

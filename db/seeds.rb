@@ -9,4 +9,15 @@ User.create(email: 'priyaprograms@gmail.com', password: 'password', first_name: 
 
 Category.create(name: 'Footwear')
 
-Product.create(category_id: 1, image_url: '../../app/assets/images/nike.jpg', title: 'Blazers', price: 98)
+Product.destroy_all
+Product.create(category_id: 1, image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_400/v1512427041/_102134885_otwlsm.jpg',
+title: 'NMD XR1', price: 150)
+Product.create(category_id: 1, image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_400/v1512429105/_9262468_x1hrcp.jpg',
+title: 'Classic Slip On', price: 60)
+Product.create(category_id: 1, image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_400/v1512429630/_101790154_h8s8td.jpg',
+title: 'Premium LX Blazer', price: 110)
+Product.create(
+  category_id: 1,
+  image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_400/v1512430171/_100265104_rrhtqy.jpg',
+  title: 'Superstar',
+  price: 80)

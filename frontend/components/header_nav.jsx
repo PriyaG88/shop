@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Navbar, Nav, Modal, Button } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router';
 import SessionModal from './session_modal';
 import { logout } from '../actions/session_actions';
@@ -35,7 +36,7 @@ class HeaderNav extends Component {
           <a className='category-links' href='#'>Apparel</a>
           <a className='category-links' href='#'>Footwear</a>
           <a className='category-links' href='#'>Accessories</a>
-          <a className='category-links' href='#'>All</a>
+          <a className='category-links' href='#/all'>All</a>
           <Nav pullRight>
             {this.state.loggedIn ? <Button onClick={this.handleLogout.bind(this)}>Log Out</Button>
           : <Button><SessionModal handleLogin={this.handleLogin.bind(this)}/></Button>
