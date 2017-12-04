@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ProductIndexItem from './product_index_item';
 
 class ProductIndex extends Component {
   constructor(props) {
@@ -11,9 +12,8 @@ class ProductIndex extends Component {
 
   renderProduct() {
     return this.props.products.map(product => (
-      <img key={product.title} src={product.image_url}></img>
+      <ProductIndexItem key={product.title} product={product} />
     ));
-
   }
 
   render() {
