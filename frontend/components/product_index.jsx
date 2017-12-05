@@ -7,7 +7,9 @@ class ProductIndex extends Component {
   }
 
   componentWillMount() {
-    this.props.fetchProducts();
+    if (this.props.path === 'all') {
+      this.props.fetchProducts();
+    }
   }
 
   renderProduct() {
