@@ -8,7 +8,6 @@ import {
 
  const ProductErrorsReducer = (state = [], action) => {
    Object.freeze(state);
-
    switch(action.type) {
     case RECEIVE_FETCH_PRODUCTS_ERRORS:
       return merge({}, action.payload);
