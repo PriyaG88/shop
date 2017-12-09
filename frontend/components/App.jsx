@@ -12,7 +12,7 @@ const App = () => {
         <HeaderNav />
       </header>
       <Route exact path="/" component={ HomePage } />
-      <Route path="/all" component={ ProductIndexContainer } />
+      <Route path="/category/:id" component={ ProductIndexContainer } />
     </div>
   );
 };

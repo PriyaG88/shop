@@ -1,12 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const HomePage = () => {
   return (
     <div className='homepage-container'>
-      <div className='new-arrivals-banner' />
-      <div className='accessories-banner' />
-      <div className='apparel-banner' />
-
+      <div classNames="cards-container">
+        <div className="card-text one">
+          Style
+        </div>
+        <div className="card-text two">
+          Made <span className="card-text-small">in</span>
+        </div>
+        <div className="card-text three">
+          <span className="card-text-small">the</span> Streets
+        </div>
+      </div>
     </div>
   );
 };

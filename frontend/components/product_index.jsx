@@ -7,22 +7,25 @@ class ProductIndex extends Component {
   }
 
   componentWillMount() {
-    if (this.props.path === 'all') {
-      this.props.fetchProducts();
-    }
+    this.props.fetchProducts();
+    console.log(this.props);
   }
 
   renderProduct() {
-    return this.props.products.map(product => (
-      <ProductIndexItem key={product.title} product={product} />
+    const categoryId = parseInt(this.props.match.params.id);
+    return this.props.products.filter(prod =>
+      prod.category_id === categoryId).map(prod => (
+      <ProductIndexItem
+        key={prod.title}
+        product={prod}  />
     ));
   }
 
   render() {
-    const productImages = this.renderProduct();
+    const productItems = this.renderProduct();
     return (
       <div>
-        {productImages}
+        {productItems}
       </div>
     );
   }
