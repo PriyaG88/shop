@@ -7,7 +7,7 @@ const ProductReducer = (state = {}, action) => {
     case RECEIVE_PRODUCTS:
       return merge({}, action.payload);
     case RECEIVE_PRODUCT:
-      return merge({}, { [action.payload.id]: action.payload} );
+      return merge({}, {[action.payload.id]: action.payload});
     default:
       return state;
   }
