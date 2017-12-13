@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 const HomePage = () => {
   return (
     <div className='homepage-container'>
-      <div classNames="cards-container">
+      <div className="cards-container">
         <div className="card-text one">
           Style
         </div>

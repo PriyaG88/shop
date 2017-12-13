@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class ProductShow extends Component {
   constructor(props) {
@@ -14,11 +15,20 @@ class ProductShow extends Component {
   }
 
   render() {
-    console.log(this.state.product);
     if (this.state.product) {
       return (
         <div>
-          <img src={this.state.product.image_url} />
+          <div className="product-show-img">
+            <img src={this.state.product.image_url} />
+          </div>
+          <div className="product-show-title">
+            {this.state.product.title}
+          </div>
+          <div>
+            <p>
+              {this.state.product.description}
+            </p>
+          </div>
         </div>
       );
     } else {
@@ -27,9 +37,14 @@ class ProductShow extends Component {
           loading...
         </div>
       );
-
     }
   }
 }
 
 export default ProductShow;
+
+ProductShow.propTypes = {
+  products: PropTypes.object,
+  productId: PropTypes.number.isRequired,
+  fetchProduct: PropTypes.func.isRequired
+};

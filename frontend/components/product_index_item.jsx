@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ProductIndexItem = ( {product} ) => {
   return (
     <div className='product-grid-container'>
-      <Link to={`/products/${product.id}`}>
+      <Link className="product-show-link" to={`/products/${product.id}`}>
         <div className='product-image-container'>
           <img src={product.image_url}></img>
         </div>

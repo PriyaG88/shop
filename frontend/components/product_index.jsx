@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ProductIndexItem from './product_index_item';
 
 class ProductIndex extends Component {
@@ -32,3 +33,8 @@ class ProductIndex extends Component {
 }
 
 export default ProductIndex;
+
+ProductIndex.propTypes = {
+  products: PropTypes.array.isRequired,
+  fetchProducts: PropTypes.func.isRequired
+};
