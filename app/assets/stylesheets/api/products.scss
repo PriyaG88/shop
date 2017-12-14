@@ -7,8 +7,8 @@
 }
 
 .product-info-container {
+  font-family: Oswald, sans-serif;
   padding-top: 10%;
-  font-family: 'Oswald', sans-serif;
   text-align: left;
 }
 
@@ -31,10 +31,21 @@
   position: absolute;
   display: inline-block;
   margin-left: 2.5%;
-  font-family: 'Oswald', sans-serif;
+  margin-right: 10%;
   color: #000;
 }
 
 .product-show-title {
-  font-size: 20px;
+  font-style: Oswald, sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: auto;
+}
+
+.product-show-desc {
+  margin-top: 10px;
+  font-style: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.7;
 }

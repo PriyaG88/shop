@@ -22,14 +22,12 @@ class ProductShow extends Component {
         <div className="product-show-container">
           <img src={product.big_image_url} />
           <div className="product-show-info">
-            <div className="product-show-title">
+            <h1 className="product-show-title">
               {product.title}
-            </div>
-            <div className="product-show-desc">
-              <p>
-                {product.description}
-              </p>
-            </div>
+            </h1>
+            <p className="product-show-desc">
+              {product.description}
+            </p>
             <div>
               ${product.price}
             </div>
