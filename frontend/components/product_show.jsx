@@ -16,18 +16,22 @@ class ProductShow extends Component {
 
   render() {
     if (this.state.product) {
+      const product = this.state.product;
       return (
-        <div>
-          <div className="product-show-img">
-            <img src={this.state.product.image_url} />
-          </div>
-          <div className="product-show-title">
-            {this.state.product.title}
-          </div>
-          <div>
-            <p>
-              {this.state.product.description}
-            </p>
+        <div className="product-show-container">
+          <img src={product.image_url} />
+          <div className="product-show-info">
+            <div className="product-show-title">
+              {product.title}
+            </div>
+            <div className="product-show-desc">
+              <p>
+                {product.description}
+              </p>
+            </div>
+            <div>
+              ${product.price}
+            </div>
           </div>
         </div>
       );

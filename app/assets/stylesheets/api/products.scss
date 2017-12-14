@@ -7,20 +7,33 @@
 }
 
 .product-info-container {
+  padding-top: 10%;
   font-family: 'Oswald', sans-serif;
-  text-align: center;
+  text-align: left;
+}
+
+.product-show-container {
+  margin-top: 5%;
+  margin-left: 10%;
+  position: relative;
 }
 
 .product-show-link {
-  color: black;
-
+  color: #000;
 }
 
 .product-show-link:hover {
-  color: black;
+  color: #000;
   text-decoration: none;
 }
 
-.product-show-img {
+.product-show-info {
+  position: absolute;
   display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  color: #000;
+}
+
+.product-show-title {
+  font-size: 20px;
 }

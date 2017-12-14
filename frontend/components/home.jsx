@@ -9,10 +9,10 @@ const HomePage = () => {
           Style
         </div>
         <div className="card-text two">
-          Made <span className="card-text-small">for</span>
+          made <span className="card-text-small">for</span>
         </div>
         <div className="card-text three">
-          <span className="card-text-small">the</span> Streets.
+          <span className="card-text-small">the</span> streets.
         </div>
       </div>
     </div>
