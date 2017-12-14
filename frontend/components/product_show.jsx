@@ -15,11 +15,12 @@ class ProductShow extends Component {
   }
 
   render() {
+    console.log(this.state.product);
     if (this.state.product) {
       const product = this.state.product;
       return (
         <div className="product-show-container">
-          <img src={product.image_url} />
+          <img src={product.big_image_url} />
           <div className="product-show-info">
             <div className="product-show-title">
               {product.title}
