@@ -49,3 +49,33 @@
   font-weight: normal;
   line-height: 1.7;
 }
+
+.add-to-cart-btn {
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: Oswald, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  padding: 10px 10px;
+  border-radius: 2px;
+  width: 80%;
+  height: 20%;
+}
+
+input[name=sizeSelect] {
+  display: none;
+}
+
+.add-to-cart-form label {
+  color: rgb(17, 17, 17);
+  display: inline-flex;
+  cursor: pointer;
+  -webkit-appearance: button;
+  height: 50px;
+  width: 150px;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  justify-content: center;
+}
