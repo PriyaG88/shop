@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import SizeChart from './SizeChart';
 
 class ProductShow extends Component {
   constructor(props) {
@@ -31,6 +32,8 @@ class ProductShow extends Component {
             <div>
               ${product.price}
             </div>
+            <SizeChart />
+            <button className="add-to-cart-btn">Add to Cart</button>
           </div>
         </div>
       );
