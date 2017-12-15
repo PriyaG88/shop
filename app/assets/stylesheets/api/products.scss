@@ -50,6 +50,10 @@
   line-height: 1.7;
 }
 
+.add-to-cart-container {
+  margin: 10px 0;
+}
+
 .add-to-cart-btn {
   background: #000;
   color: #fff;
@@ -78,4 +82,8 @@ input[name=sizeSelect] {
   background-color: rgb(255, 255, 255);
   align-items: center;
   justify-content: center;
+}
+
+.size-label:hover {
+  border: 1px solid black;
 }
