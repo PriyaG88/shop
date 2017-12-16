@@ -39,5 +39,69 @@ Product.create!(
   big_image_url: 'http://res.cloudinary.com/priyag88/image/upload/v1512430171/_100265104_rrhtqy.jpg',
   title: 'Superstar',
   description: 'This shell-toed, striped sneaker looks good with just about
-  anything.  Add these go-to classics to your wardrobe to up your wardrobe.',
+  anything.  Add these go-to classics to your wardrobe to up your shoe style.',
   price: 80)
+
+Product.create!(
+  category_id: 19,
+  image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_400/v1513389626/_100278658_xhn1gu.jpg',
+  big_image_url: 'http://res.cloudinary.com/priyag88/image/upload/v1513389626/_100278658_xhn1gu.jpg',
+  title: 'Heart Logo Cardigan',
+  description: 'The classic V neck cardigan gets an update with an understated heart logo, chest patch.',
+  price: 398)
+
+Product.create!(
+  category_id: 19,
+  image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_400/v1513390600/_101804080_gpoygh.jpg',
+  big_image_url: 'http://res.cloudinary.com/priyag88/image/upload/v1513390600/_101804080_gpoygh.jpg',
+  title: 'Gold Heart Patch Cardigan',
+  description: 'The classic crew neck cardigan gets a touch of flair with a gold heart applique.',
+  price: 362)
+
+Product.create!(
+  category_id: 19,
+  image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_400/v1513389665/_101744601_rscxig.jpg',
+  big_image_url: 'http://res.cloudinary.com/priyag88/image/upload/v1513389665/_101744601_rscxig.jpg',
+  title: 'Black Heart Stripe Shirt',
+  description: 'The go-to oxford shirt gets a modern update with a black heart chest applique.',
+  price: 284)
+
+Product.create!(
+  category_id: 19,
+  image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_400/v1513389655/_101804399-1_lkry5r.jpg',
+  big_image_url: 'http://res.cloudinary.com/priyag88/image/upload/v1513389655/_101804399-1_lkry5r.jpg',
+  title: 'Heart Stripe Shirt',
+  description: 'This crisp button down gets a stylish accent with a wide-eyed, black heart logo.',
+  price: 271)
+
+Product.create!(
+  category_id: 19,
+  image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_400/v1513389674/_101074917_qgtzyn.jpg',
+  big_image_url: 'http://res.cloudinary.com/priyag88/image/upload/v1513389674/_101074917_qgtzyn.jpg',
+  title: 'Sportswear Tech Hoodie',
+  description: 'This hoodie is fashionable and functional with Dri-FIT technology that keeps you dry on and off the courts.',
+  price: 90)
+
+Product.create!(
+  category_id: 19,
+  image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_400/v1513389618/_101323859_w39z03.jpg',
+  big_image_url: 'http://res.cloudinary.com/priyag88/image/upload/v1513389618/_101323859_w39z03.jpg',
+  title: 'Logo Graphic Tee',
+  description: 'A lightweight, classic logo tee that pairs easily with just about anything.',
+  price: 90)
+
+Product.create!(
+  category_id: 19,
+  image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_400/v1513392448/_101940555_g5cz7b.jpg',
+  big_image_url: 'http://res.cloudinary.com/priyag88/image/upload/v1513392448/_101940555_g5cz7b.jpg',
+  title: 'Raglan Tee',
+  description: 'A lightweight, raglan tee styled with varsity striping on the sleeves.',
+  price: 55)
+
+Product.create!(
+  category_id: 19,
+  image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_400/v1513392683/_102005259_m9q0dh.jpg',
+  big_image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_736/v1513392683/_102005259_m9q0dh.jpg',
+  title: 'Essentials Women\'s Parka',
+  description: 'This parka comes equipped with a detachable hood, large pockets and duel zip and button closures.',
+  price: 400)

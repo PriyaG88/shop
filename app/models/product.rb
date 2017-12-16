@@ -14,8 +14,8 @@
 #
 
 class Product < ApplicationRecord
-  validates :category_id, :image_url, :title, :price, :big_image_url, :description,
-  presence: true
+  validates :category_id, :image_url, :title, :price, :big_image_url, :description, presence: true
+  validates :title, uniqueness: true
 
   belongs_to :category
 end

@@ -4,6 +4,7 @@ const SizeChart = (props) => {
   if (props.category) {
     return (
       <div className="add-to-cart-container">
+        <div>Choose Size</div>
         <form className="add-to-cart-form">
           <label className="size-label">XS
             <input name="sizeSelect" type="radio" value="XS" className="size-input"></input>
@@ -26,6 +27,7 @@ const SizeChart = (props) => {
   }
   return (
     <div className="add-to-cart-container">
+      <span className="size-select-direction">Choose Size</span>
       <form className="add-to-cart-form">
         <label className="size-label">6
           <input name="sizeSelect" type="radio" value="6" className="size-input"></input>
