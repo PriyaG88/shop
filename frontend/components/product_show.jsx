@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import SizeChart from './SizeChart';
+import SizeChartContainer from './SizeChartContainer';
 
 class ProductShow extends Component {
   constructor(props) {
@@ -16,7 +16,6 @@ class ProductShow extends Component {
   }
 
   render() {
-    console.log(this.state.product);
     if (this.state.product) {
       const product = this.state.product;
       return (
@@ -32,7 +31,7 @@ class ProductShow extends Component {
             <div>
               ${product.price}
             </div>
-            <SizeChart />
+            <SizeChartContainer />
             <button className="add-to-cart-btn">Add to Cart</button>
           </div>
         </div>
