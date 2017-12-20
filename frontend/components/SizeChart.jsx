@@ -20,21 +20,13 @@ class SizeChart extends Component {
         <div className="add-to-cart-container">
           <span className="size-select-direction">Choose Size</span>
           <form className="add-to-cart-form">
-            <label className="size-label">XS
-              <input name="sizeSelect" type="radio" value="XS" className="size-input"></input>
-            </label>
-            <label className="size-label">S
-              <input name="sizeSelect" type="radio" value="S" className="size-input"></input>
-            </label>
-            <label className="size-label">M
-              <input name="sizeSelect" type="radio" value="M" className="size-input"></input>
-            </label>
-            <label className="size-label">L
-              <input name="sizeSelect" type="radio" value="L" className="size-input"></input>
-            </label>
-            <label className="size-label">XL
-              <input name="sizeSelect" type="radio" value="XL" className="size-input"></input>
-            </label>
+            <select name="alpha-size-options">
+              <option value="X-Small">X-Small</option>
+              <option value="Small">Small</option>
+              <option value="Medium">Medium</option>
+              <option value="Large">Large</option>
+              <option value="X-Large">X-Large</option>
+            </select>
           </form>
         </div>
       );

@@ -25,7 +25,7 @@ class ProductIndex extends Component {
   render() {
     const productItems = this.renderProduct();
     return (
-      <div>
+      <div className="product-index-container">
         {productItems}
       </div>
     );

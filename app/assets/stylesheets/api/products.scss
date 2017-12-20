@@ -1,6 +1,11 @@
 // Place all the styles related to the api/products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.product-index-container {
+  display: inline-block;
+}
+
 .product-grid-container {
   display: inline-block;
   margin: 15px;
