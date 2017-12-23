@@ -35,33 +35,17 @@ class SizeChart extends Component {
       <div className="add-to-cart-container">
         <span className="size-select-direction">Choose Size</span>
         <form className="add-to-cart-form">
-          <label className="size-label">6
-            <input name="sizeSelect" type="radio" value="6" className="size-input"></input>
-          </label>
-          <label className="size-label">6.5
-            <input name="sizeSelect" type="radio" value="6.5" className="size-input"></input>
-          </label>
-          <label className="size-label">7
-            <input name="sizeSelect" type="radio" value="7" className="size-input"></input>
-          </label>
-          <label className="size-label">7.5
-            <input name="sizeSelect" type="radio" value="7.5" className="size-input"></input>
-          </label>
-          <label className="size-label">8
-            <input name="sizeSelect" type="radio" value="8" className="size-input"></input>
-          </label>
-          <label className="size-label">8.5
-            <input name="sizeSelect" type="radio" value="8.5" className="size-input"></input>
-          </label>
-          <label className="size-label">9
-            <input name="sizeSelect" type="radio" value="9" className="size-input"></input>
-          </label>
-          <label className="size-label">9.5
-            <input name="sizeSelect" type="radio" value="9.5" className="size-input"></input>
-          </label>
-          <label className="size-label">10
-            <input name="sizeSelect" type="radio" value="10" className="size-input"></input>
-          </label>
+          <select name="alpha-size-options">
+            <option value="6">6</option>
+            <option value="6.5">6.5</option>
+            <option value="7">7</option>
+            <option value="7.5">7.5</option>
+            <option value="8">8</option>
+            <option value="8.5">8.5</option>
+            <option value="9">9</option>
+            <option value="9.5">9.5</option>
+            <option value="10">10</option>
+          </select>
         </form>
       </div>
     );
