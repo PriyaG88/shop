@@ -32,7 +32,6 @@ class ProductShow extends Component {
               ${product.price}
             </div>
             <SizeChartContainer />
-            <button className="add-to-cart-btn">Add to Cart</button>
           </div>
         </div>
       );

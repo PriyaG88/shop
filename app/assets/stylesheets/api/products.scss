@@ -59,6 +59,10 @@
   margin: 10px 0;
 }
 
+.add-to-cart-btn {
+  display: block;
+}
+
 .size-select-direction {
   font-family: Oswald, sans-serif;
   font-size: 18px;
@@ -79,10 +83,6 @@
   width: 80%;
   height: 20%;
   outline: none;
-}
-
-input[name=sizeSelect] {
-  display: none;
 }
 
 .add-to-cart-form label {

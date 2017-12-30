@@ -27,6 +27,7 @@ class SizeChart extends Component {
               <option value="Large">Large</option>
               <option value="X-Large">X-Large</option>
             </select>
+            <button className="add-to-cart-btn">Add to Cart</button>
           </form>
         </div>
       );
@@ -46,6 +47,7 @@ class SizeChart extends Component {
             <option value="9.5">9.5</option>
             <option value="10">10</option>
           </select>
+          <button className="add-to-cart-btn">Add to Cart</button>
         </form>
       </div>
     );
