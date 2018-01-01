@@ -50,6 +50,7 @@ class HeaderNav extends Component {
         <div className='nav-links'>
           {categories}
           <Nav pullRight>
+            <i className="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
             {this.state.loggedIn ? <Button onClick={this.handleLogout.bind(this)}>Log Out</Button>
           : <Button><SessionModal handleLogin={this.handleLogin.bind(this)}/></Button>
             }
