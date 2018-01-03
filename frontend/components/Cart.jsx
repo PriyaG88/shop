@@ -13,11 +13,17 @@ class Cart extends Component {
   }
 
   render() {
-    return (
-      <div>
-        {this.props.cart}
-      </div>
-    );
+    if (this.state.cart.length > 0) {
+      return (
+        <div>
+          {this.state.cart.map(item => item.product.title)}
+        </div>
+      );
+    } else {
+      return (
+        <div>loading...</div>
+      );
+    }
   }
 }
 
