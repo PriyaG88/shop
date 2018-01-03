@@ -23,3 +23,5 @@ const CartItemErrorsReducer = (state, action) => {
       return state;
   }
 };
+
+export default CartItemErrorsReducer;
