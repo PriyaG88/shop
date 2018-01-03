@@ -7,7 +7,7 @@ import {
  }
   from '../actions/cart_item_actions';
 
-const CartItemErrorsReducer = (state, action) => {
+const CartItemErrorsReducer = (state = [], action) => {
   Object.freeze(state);
 
   switch(action.type) {
