@@ -5,7 +5,9 @@ class SizeChart extends Component {
     super(props);
     this.state = {
       product: '',
-      size: ''
+      product_id: this.props.productId,
+      quantity: 1,
+      size: '',
     };
   }
 
@@ -16,7 +18,18 @@ class SizeChart extends Component {
 
   handleChange(e) {
     this.setState({size: e.currentTarget.value});
+  }
+
+  handleClick(e) {
+    e.preventDefault();
     console.log(this.state);
+    if (this.state.quantity > 0) {
+      this.props.addToCart({
+        product_id: this.state.product_id,
+        quantity: this.state.quantity,
+        size: this.state.size
+      });
+    }
   }
 
   render() {
@@ -25,14 +38,17 @@ class SizeChart extends Component {
       return (
         <div className="add-to-cart-container">
           <span className="size-select-direction">Choose Size</span>
+          <form className="add-to-cart-form">
             <select onChange={this.handleChange.bind(this)} name="alpha-size-options" value={this.state.size}>
+              <option selected value="Select a Size">Select a Size</option>
               <option value="X-Small">X-Small</option>
               <option value="Small">Small</option>
               <option value="Medium">Medium</option>
               <option value="Large">Large</option>
               <option value="X-Large">X-Large</option>
             </select>
-            <button className="add-to-cart-btn">Add to Cart</button>
+            <button onClick={this.handleClick.bind(this)} className="add-to-cart-btn">Add to Cart</button>
+          </form>
         </div>
       );
     }
@@ -41,6 +57,7 @@ class SizeChart extends Component {
         <span className="size-select-direction">Choose Size</span>
         <form className="add-to-cart-form">
           <select onChange={this.handleChange.bind(this)} name="alpha-size-options" value={this.state.size}>
+            <option value="Select a Size">Select a Size</option>
             <option value="6">6</option>
             <option value="6.5">6.5</option>
             <option value="7">7</option>
@@ -51,7 +68,7 @@ class SizeChart extends Component {
             <option value="9.5">9.5</option>
             <option value="10">10</option>
           </select>
-          <button className="add-to-cart-btn">Add to Cart</button>
+          <button onClick={this.handleClick.bind(this)} className="add-to-cart-btn">Add to Cart</button>
         </form>
       </div>
     );
