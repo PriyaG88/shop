@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ProductIndexItem from './product_index_item';
 
 class Cart extends Component {
   constructor(props) {
@@ -9,11 +10,20 @@ class Cart extends Component {
     this.props.fetchCartItems();
   }
 
+  renderCartItems() {
+    return this.props.cart.map(item => (
+      <ProductIndexItem
+        key={item.product.title + item.id}
+        product={item.product} />
+    ));
+  }
+
   render() {
+    const cartItems = this.renderCartItems();
     return (
-      <div>
-        {this.props.cart.map(item => item.product.title)}
-      </div>
+      <ul>
+        {cartItems}
+      </ul>
     );
   }
 }
