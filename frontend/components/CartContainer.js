@@ -1,9 +1,10 @@
 import { connect } from 'react-redux';
 import { fetchCartItems } from '../actions/cart_item_actions';
+import { cartItems } from '../reducers/selector';
 import Cart from './Cart';
 
 const mapStateToProps = state => ({
-  cart: state.entities.cart
+  cart: cartItems(state)
 });
 
 const mapDispatchToProps = dispatch => ({
