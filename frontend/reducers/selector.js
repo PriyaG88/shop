@@ -11,5 +11,6 @@ export const allCategories = state => {
 };
 
 export const cartItems = state => {
-  return Object.values(state.entities.cart);
+  return Object.values(state.entities.cart)
+  .filter(item => item.user_id === state.session.currentUser.id);
 };
