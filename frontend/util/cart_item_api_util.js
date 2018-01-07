@@ -1,21 +1,21 @@
 export const fetchCartItems = () => {
   return $.ajax({
     method: 'GET',
-    url: '/api/cart_item'
+    url: 'api/cart_items'
   });
 };
 
 export const addToCart = cartItem => {
   return $.ajax({
     method: 'POST',
-    url: '/api/cart_item',
+    url: 'api/cart_items',
     data: { cartItem }
   });
 };
 
-export const removeFromCart = cartItemId => {
+export const removeFromCart = id => {
   return $.ajax({
     method: 'DELETE',
-    url: `/api/cart_item/${cartItemId}`
+    url: `api/cart_items/${id}`
   });
 };
