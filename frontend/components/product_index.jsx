@@ -9,7 +9,6 @@ class ProductIndex extends Component {
 
   componentWillMount() {
     this.props.fetchProducts();
-    console.log(this.props);
   }
 
   renderProduct() {

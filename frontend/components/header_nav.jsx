@@ -46,7 +46,7 @@ class HeaderNav extends Component {
         <ul>
           <Link to="/" className="nav-links main-logo">theShop</Link>
           {categories}
-          <i className="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+          <Link to="/cart" className="nav-links cart"><i className="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></Link>
           {this.state.loggedIn ? <button onClick={this.handleLogout.bind(this)}>Log Out</button>
         : <button><SessionModal handleLogin={this.handleLogin.bind(this)}/></button>
           }
