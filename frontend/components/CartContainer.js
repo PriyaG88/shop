@@ -4,7 +4,8 @@ import { cartItems } from '../reducers/selector';
 import Cart from './Cart';
 
 const mapStateToProps = state => ({
-  cart: cartItems(state)
+  cart: cartItems(state),
+  isLoggedIn: Boolean(state.session.currentUser)
 });
 
 const mapDispatchToProps = dispatch => ({

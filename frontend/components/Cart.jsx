@@ -15,11 +15,12 @@ class Cart extends Component {
     const { cart } = this.props;
 
     return (
-      <ul>
+      <ul className="cart-item-list">
         {cart.map(item => (
-          <ProductIndexItem
-            key={item.id}
+          <li key={item.id}>
+            <ProductIndexItem
             product={item.product} />
+          </li>
         ))}
       </ul>
     );
