@@ -10,19 +10,16 @@ class Cart extends Component {
     this.props.fetchCartItems();
   }
 
-  renderCartItems() {
-    return this.props.cart.map(item => (
-      <ProductIndexItem
-        key={item.product.title + item.id}
-        product={item.product} />
-    ));
-  }
-
   render() {
-    const cartItems = this.renderCartItems();
+    const { cart } = this.props;
+
     return (
       <ul>
-        {cartItems}
+        {cart.map(item => (
+          <ProductIndexItem
+            key={item.id}
+            product={item.product} />
+        ))}
       </ul>
     );
   }
