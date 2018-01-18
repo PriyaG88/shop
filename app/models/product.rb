@@ -18,4 +18,5 @@ class Product < ApplicationRecord
   validates :title, uniqueness: true
 
   belongs_to :category
+  has_many :cart_items
 end
