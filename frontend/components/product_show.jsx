@@ -37,9 +37,7 @@ class ProductShow extends Component {
       );
     } else {
       return (
-        <div>
-          loading...
-        </div>
+        <div />
       );
     }
   }
