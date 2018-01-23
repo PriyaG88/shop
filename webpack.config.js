@@ -1,4 +1,4 @@
-var path = require("path");
+  var path = require("path");
 
 module.exports = {
   context: __dirname,
@@ -14,7 +14,8 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: ['es2015', 'react']
+          presets: ['es2015', 'react'],
+          plugins: ['transform-class-properties']
         }
       }
     ]
