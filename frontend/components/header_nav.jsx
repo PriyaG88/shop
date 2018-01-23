@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Modal } from 'react-bootstrap';
 import SessionModal from './session_modal';
 import { logout } from '../actions/session_actions';
@@ -15,13 +15,13 @@ class HeaderNav extends Component {
     };
   }
 
-  handleLogout(e) {
+  handleLogout = e => {
     e.preventDefault();
     this.props.logout();
     this.setState({ loggedIn: false });
   }
 
-  handleLogin(e) {
+  handleLogin = () => {
     this.setState({ loggedIn: true });
   }
 
@@ -31,10 +31,10 @@ class HeaderNav extends Component {
 
   renderCategories() {
     return this.props.categories.map(category => (
-      <Link key={category.name} className="nav-links"
+      <NavLink key={category.name} className="nav-links"
         to={`/category/${category.id}`} >
         {category.name}
-      </Link>
+      </NavLink>
     ));
   }
 
@@ -44,11 +44,11 @@ class HeaderNav extends Component {
     return (
       <nav className="header-nav">
         <ul>
-          <Link to="/" className="nav-links main-logo">theShop</Link>
+          <NavLink to="/" className="nav-links main-logo">theShop</NavLink>
           {categories}
-          <Link to="/cart" className="nav-links cart"><i className="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></Link>
-          {this.state.loggedIn ? <button onClick={this.handleLogout.bind(this)}>Log Out</button>
-        : <button><SessionModal handleLogin={this.handleLogin.bind(this)}/></button>
+          <NavLink to="/cart" className="nav-links cart"><i className="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></NavLink>
+          {this.state.loggedIn ? <button onClick={this.handleLogout}>Log Out</button>
+        : <button><SessionModal handleLogin={this.handleLogin}/></button>
           }
         </ul>
       </nav>
