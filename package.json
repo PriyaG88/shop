@@ -28,6 +28,10 @@
     "lib": "lib",
     "test": "test"
   },
+  "engines": {
+    "node": "6.10.1",
+    "npm": "5.6.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "webpack"
@@ -38,9 +42,5 @@
   "devDependencies": {
     "babel-plugin-transform-class-properties": "^6.24.1",
     "redux-devtools-extension": "^2.13.2"
-  },
-  "engines": {
-    "node": "6.10.1",
-    "npm": "5.6.0"
   }
 }

@@ -11,13 +11,13 @@ class ProductIndex extends Component {
     this.props.fetchProducts();
   }
 
-  renderProduct() {
+  renderProduct = () => {
     const categoryId = parseInt(this.props.match.params.id);
     return this.props.products.filter(prod =>
       prod.category_id === categoryId).map(prod => (
       <ProductIndexItem
         key={prod.title}
-        product={prod}  />
+        product={prod} />
     ));
   }
 

@@ -7,21 +7,32 @@ class Cart extends Component {
     super(props);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchCartItems();
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.isLoggedIn !== nextProps.isLoggedIn) {
+      this.props.fetchCartItems();
+    }
+  }
   render() {
-    const { cart } = this.props;
+    const { isLoggedIn, cart } = this.props;
+
+    if (isLoggedIn) {
+      return (
+        <ul className="cart-item-list">
+          {cart.map(item => (
+            <li key={item.id} className="cart-item">
+              <ProductIndexItem product={item.product} />
+            </li>
+          ))}
+        </ul>
+      );
+    }
 
     return (
-      <ul className="cart-item-list">
-        {cart.map(item => (
-          <li key={item.id} className="cart-item">
-            <ProductIndexItem product={item.product} />
-          </li>
-        ))}
-      </ul>
+      <p>Please Log in</p>
     );
   }
 }
