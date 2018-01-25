@@ -19,7 +19,9 @@
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
-    "webpack": "^3.8.1"
+    "webpack": "^3.8.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "redux-devtools-extension": "^2.13.2"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",
@@ -39,8 +41,4 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "redux-devtools-extension": "^2.13.2"
-  }
 }
