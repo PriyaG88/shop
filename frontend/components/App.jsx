@@ -4,7 +4,7 @@ import HeaderNav from './header_nav';
 import HomePage from './home';
 import ProductIndexContainer from './product_index_container';
 import ProductShowContainer from './product_show_container';
-import CartContainer from './CartContainer';
+import CartIndexContainer from './CartIndexContainer';
 
 
 const App = () => {
@@ -16,7 +16,7 @@ const App = () => {
       <Route exact path="/" component={ HomePage } />
       <Route path="/category/:id" component={ ProductIndexContainer } />
       <Route path="/products/:id" component={ ProductShowContainer } />
-      <Route path="/cart" component={ CartContainer } />
+      <Route path="/cart" component={ CartIndexContainer } />
     </div>
   );
 };
