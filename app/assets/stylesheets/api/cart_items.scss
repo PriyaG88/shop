@@ -1,3 +1,21 @@
 // Place all the styles related to the api/CartItems controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.cart-item {
+  padding: 10px;
+}
+
+// .cart-item-img {
+//   vertical-align: top;
+// }
+.cart-item-details {
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+}
+
+.cart-item-link, .cart-item-link:hover {
+  color: #000;
+  text-decoration: underline;
+}
