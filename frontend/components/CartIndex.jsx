@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ProductIndexItem from './product_index_item';
+import CartIndexItem from './CartIndexItem';
 
 class CartIndex extends Component {
   constructor(props) {
@@ -17,14 +17,17 @@ class CartIndex extends Component {
     }
   }
   render() {
-    const { isLoggedIn, cart } = this.props;
+    const { isLoggedIn, cart, removeFromCart } = this.props;
 
     if (isLoggedIn) {
       return (
         <ul className="cart-item-list">
           {cart.map(item => (
             <li key={item.id} className="cart-item">
-              <ProductIndexItem product={item.product} />
+              <CartIndexItem
+                item={item}
+                removeFromCart={removeFromCart}
+              />
             </li>
           ))}
         </ul>

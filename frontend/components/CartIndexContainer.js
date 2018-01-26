@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchCartItems } from '../actions/cart_item_actions';
+import { fetchCartItems, removeFromCart } from '../actions/cart_item_actions';
 import { cartItems } from '../reducers/selector';
 import CartIndex from './CartIndex';
 
@@ -15,7 +15,8 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchCartItems: () => dispatch(fetchCartItems())
+  fetchCartItems: () => dispatch(fetchCartItems()),
+  removeFromCart: id => dispatch(removeFromCart(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CartIndex);
