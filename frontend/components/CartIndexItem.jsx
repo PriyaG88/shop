@@ -6,7 +6,7 @@ const CartIndexItem = ({ item }) => {
 
   return (
     <div>
-      <img src={image_url} className="cart-item-img" />
+      <Link to={`/products/${id}`}><img src={image_url} className="cart-item-img" /></Link>
       <div className="cart-item-details">
         <span className="cart-item-title">
           <Link to={`/products/${id}`} className="cart-item-link">{title}</Link>
@@ -15,7 +15,11 @@ const CartIndexItem = ({ item }) => {
           Size: <span>{item.size}</span>
         </div>
         <div>
-          Qty: <span>{item.quantity} @ ${item.product.price}</span>    
+          Qty: <span>{item.quantity} @ ${item.product.price}</span>
+        </div>
+        <div className="cart-item-actions">
+          <input className="cart-item-btn" type="button" value="Remove"></input>
+          <input className="cart-item-btn" type="button" value="Edit"></input>
         </div>
       </div>
     </div>
