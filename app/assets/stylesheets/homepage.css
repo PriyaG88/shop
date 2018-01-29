@@ -1,6 +1,7 @@
 .header-nav {
   background-color: white;
   margin: auto;
+  border-bottom: 1px solid #eee;
 }
 
 .header-nav ul {
