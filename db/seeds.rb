@@ -5,11 +5,25 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Category.create!(
+  name: 'Apparel'
+)
 
+Category.create!(
+  name: 'Footwear'
+)
+
+Category.create!(
+  name: 'Accessories'
+)
+
+#18
+#19
+#20
 
 Product.destroy_all
 Product.create!(
-  category_id: 18,
+  category_id: 2,
   image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_400/v1512427041/_102134885_otwlsm.jpg',
   big_image_url: 'http://res.cloudinary.com/priyag88/image/upload/v1512427041/_102134885_otwlsm.jpg',
   title: 'NMD XR1',
@@ -18,7 +32,7 @@ Product.create!(
   addition to your already top notch footwear game.',
   price: 150)
 Product.create!(
-  category_id: 18,
+  category_id: 2,
   image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_400/v1512429105/_9262468_x1hrcp.jpg',
   big_image_url: 'http://res.cloudinary.com/priyag88/image/upload/v1512429105/_9262468_x1hrcp.jpg',
   title: 'Classic Slip On',
@@ -26,7 +40,7 @@ Product.create!(
   contrast sole.  These sneakers will complement any and every outfit.',
   price: 60)
 Product.create!(
-  category_id: 18,
+  category_id: 2,
   image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_400/v1512429630/_101790154_h8s8td.jpg',
   big_image_url: 'http://res.cloudinary.com/priyag88/image/upload/v1512429630/_101790154_h8s8td.jpg',
   title: 'Premium LX Blazer',
@@ -34,7 +48,7 @@ Product.create!(
   essential in monochromatic blue.',
   price: 110)
 Product.create!(
-  category_id: 18,
+  category_id: 2,
   image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_400/v1512430171/_100265104_rrhtqy.jpg',
   big_image_url: 'http://res.cloudinary.com/priyag88/image/upload/v1512430171/_100265104_rrhtqy.jpg',
   title: 'Superstar',
@@ -43,7 +57,7 @@ Product.create!(
   price: 80)
 
 Product.create!(
-  category_id: 19,
+  category_id: 1,
   image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_400/v1513389626/_100278658_xhn1gu.jpg',
   big_image_url: 'http://res.cloudinary.com/priyag88/image/upload/v1513389626/_100278658_xhn1gu.jpg',
   title: 'Heart Logo Cardigan',
@@ -51,7 +65,7 @@ Product.create!(
   price: 398)
 
 Product.create!(
-  category_id: 19,
+  category_id: 1,
   image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_400/v1513390600/_101804080_gpoygh.jpg',
   big_image_url: 'http://res.cloudinary.com/priyag88/image/upload/v1513390600/_101804080_gpoygh.jpg',
   title: 'Gold Heart Patch Cardigan',
@@ -59,7 +73,7 @@ Product.create!(
   price: 362)
 
 Product.create!(
-  category_id: 19,
+  category_id: 1,
   image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_400/v1513389665/_101744601_rscxig.jpg',
   big_image_url: 'http://res.cloudinary.com/priyag88/image/upload/v1513389665/_101744601_rscxig.jpg',
   title: 'Black Heart Stripe Shirt',
@@ -67,7 +81,7 @@ Product.create!(
   price: 284)
 
 Product.create!(
-  category_id: 19,
+  category_id: 1,
   image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_400/v1513389655/_101804399-1_lkry5r.jpg',
   big_image_url: 'http://res.cloudinary.com/priyag88/image/upload/v1513389655/_101804399-1_lkry5r.jpg',
   title: 'Heart Stripe Shirt',
@@ -75,7 +89,7 @@ Product.create!(
   price: 271)
 
 Product.create!(
-  category_id: 19,
+  category_id: 1,
   image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_400/v1513389674/_101074917_qgtzyn.jpg',
   big_image_url: 'http://res.cloudinary.com/priyag88/image/upload/v1513389674/_101074917_qgtzyn.jpg',
   title: 'Sportswear Tech Hoodie',
@@ -83,7 +97,7 @@ Product.create!(
   price: 90)
 
 Product.create!(
-  category_id: 19,
+  category_id: 1,
   image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_400/v1513389618/_101323859_w39z03.jpg',
   big_image_url: 'http://res.cloudinary.com/priyag88/image/upload/v1513389618/_101323859_w39z03.jpg',
   title: 'Logo Graphic Tee',
@@ -91,7 +105,7 @@ Product.create!(
   price: 90)
 
 Product.create!(
-  category_id: 19,
+  category_id: 1,
   image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_400/v1513392448/_101940555_g5cz7b.jpg',
   big_image_url: 'http://res.cloudinary.com/priyag88/image/upload/v1513392448/_101940555_g5cz7b.jpg',
   title: 'Raglan Tee',
@@ -99,7 +113,7 @@ Product.create!(
   price: 55)
 
 Product.create!(
-  category_id: 19,
+  category_id: 1,
   image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_400/v1513392683/_102005259_m9q0dh.jpg',
   big_image_url: 'http://res.cloudinary.com/priyag88/image/upload/c_scale,h_736/v1513392683/_102005259_m9q0dh.jpg',
   title: 'Essentials Women\'s Parka',
