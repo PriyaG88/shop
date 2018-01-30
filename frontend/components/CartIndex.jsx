@@ -18,7 +18,6 @@ class CartIndex extends Component {
   }
   render() {
     const { isLoggedIn, cart, removeFromCart } = this.props;
-
     if (isLoggedIn) {
       return (
         <ul className="cart-item-list">
