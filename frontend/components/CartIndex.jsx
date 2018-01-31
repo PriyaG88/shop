@@ -11,18 +11,14 @@ class CartIndex extends Component {
     this.props.fetchCartItems();
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (this.props.isLoggedIn !== nextProps.isLoggedIn) {
-      this.props.fetchCartItems();
-    }
-  }
   render() {
     const { isLoggedIn, cart, removeFromCart } = this.props;
+
     if (isLoggedIn) {
       return (
         <ul className="cart-item-list">
           {cart.map(item => (
-            <li key={item.id} className="cart-item">
+            <li key={'item' + item.id} className="cart-item">
               <CartIndexItem
                 item={item}
                 removeFromCart={removeFromCart}

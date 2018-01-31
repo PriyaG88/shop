@@ -16,6 +16,7 @@ export const addToCart = cartItem => {
 export const removeFromCart = id => {
   return $.ajax({
     method: 'DELETE',
-    url: `api/cart_items/${id}`
+    url: `api/cart_items/${id}`,
+    data: { id }
   });
 };
