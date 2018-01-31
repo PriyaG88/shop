@@ -1,7 +1,9 @@
 export const RECEIVE_CART_ITEM = 'RECEIVE_CART_ITEM';
 export const RECEIVE_CART_ITEMS = 'RECEIVE_CART_ITEMS';
+export const REMOVE_CART_ITEM = 'REMOVE_CART_ITEM';
 export const RECEIVE_CART_ITEM_ERRORS = 'RECEIVE_CART_ITEM_ERRORS';
 export const RECEIVE_CART_ITEMS_ERRORS = 'RECEIVE_CART_ITEMS_ERRORS';
+export const REMOVE_CART_ITEM_ERRORS = 'REMOVE_CART_ITEM_ERRORS';
 import * as CartItemAPIUtil from '../util/cart_item_api_util';
 
 export const fetchCartItems = () => dispatch => (
@@ -15,8 +17,8 @@ export const addToCart = item => dispatch => (
 );
 
 export const removeFromCart = id => dispatch => (
-  CartItemAPIUtil.removeFromCart(id).then(() => dispatch(receiveCartItem(null)),
-  err => ( dispatch(receiveCartItemErrors(err.responseJSON))))
+  CartItemAPIUtil.removeFromCart(id).then(() => dispatch(removeCartItem(id)),
+  err => ( dispatch(removeCartItemErrors(err.responseJSON))))
 );
 
 const receiveCartItems = items => ({
@@ -31,6 +33,16 @@ const receiveCartItem = item => ({
 
 const receiveCartItemsErrors = errors => ({
   type: RECEIVE_CART_ITEMS_ERRORS,
+  payload: errors
+});
+
+const removeCartItem = id => ({
+  type: REMOVE_CART_ITEM,
+  payload: id
+});
+
+const removeCartItemErrors = errors => ({
+  type: REMOVE_CART_ITEM_ERRORS,
   payload: errors
 });
 
