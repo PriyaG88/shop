@@ -2,7 +2,7 @@ import merge from 'lodash/merge';
 import { RECEIVE_CART_ITEM, RECEIVE_CART_ITEMS, REMOVE_CART_ITEM }
   from '../actions/cart_item_actions';
 
-const CartItemReducer = (state = [], action) => {
+const CartItemReducer = (state = {}, action) => {
   Object.freeze(state);
 
   switch(action.type) {
