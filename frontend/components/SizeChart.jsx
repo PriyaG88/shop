@@ -22,7 +22,6 @@ class SizeChart extends Component {
 
   handleClick(e) {
     e.preventDefault();
-    console.log(this.state);
     if (this.state.quantity > 0) {
       this.props.addToCart({
         product_id: this.state.product_id,
