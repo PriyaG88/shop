@@ -13,6 +13,14 @@ export const addToCart = cartItem => {
   });
 };
 
+export const updateCartItem = cartItem => {
+  return $.ajax({
+    method: 'PATCH',
+    url: `api/cart_items/${cartItem.id}`,
+    data: { cartItem }
+  });
+};
+
 export const removeFromCart = id => {
   return $.ajax({
     method: 'DELETE',
