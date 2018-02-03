@@ -5,14 +5,23 @@ import CartIndexItem from './CartIndexItem';
 class CartIndex extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      isOpen: false
+    };
   }
 
   componentDidMount() {
     this.props.fetchCartItems();
   }
 
+  toggleModal = () => {
+    this.setState(prevState => {
+      return { isOpen: !prevState.isOpen };
+    });
+  }
+
   render() {
-    const { isLoggedIn, cart, removeFromCart } = this.props;
+    const { isLoggedIn, cart, removeFromCart, updateCartItem } = this.props;
 
     if (isLoggedIn) {
       return (
@@ -22,6 +31,9 @@ class CartIndex extends Component {
               <CartIndexItem
                 item={item}
                 removeFromCart={removeFromCart}
+                updateCartItem={updateCartItem}
+                isOpen={this.state.isOpen}
+                toggleModal={this.toggleModal}
               />
             </li>
           ))}
