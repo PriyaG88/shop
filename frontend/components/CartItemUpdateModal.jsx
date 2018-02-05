@@ -15,6 +15,7 @@ class CartItemUpdateModal extends Component {
   handleSubmit = e => {
     e.preventDefault();
     this.props.updateCartItem(this.state);
+    this.props.toggleModal();
   }
 
   handleChange = field => {
@@ -23,36 +24,45 @@ class CartItemUpdateModal extends Component {
     });
   }
 
+  //need to check for product category in order to display numeric or alpha sizing
 
-  //need to set field on onChange methods for select
   render() {
+
     if (this.props.isOpen) {
       return (
-        <div>
-          <form onSubmit={this.handleSubmit}>
-            <select value={this.state.size} onChange={this.handleChange('size')}>
-              <option value="Size">Size</option>
-              <option value="X-Small">X-Small</option>
-              <option value="Small">Small</option>
-              <option value="Medium">Medium</option>
-              <option value="Large">Large</option>
-              <option value="X-Large">X-Large</option>
-            </select>
-            <select value={this.state.quantity} onChange={this.handleChange('quantity')}>
-              <option value="Qty">Qty</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-            </select>
-            <input type="submit" value="UPDATE"></input>
-          </form>
+        <div className="backdrop">
+          <div className="modal-content">
+            <span className="close" onClick={this.props.toggleModal}>&times;</span>
+            <div className="update-img-container">
+              <img src={this.props.item.product.image_url}></img>
+            </div>
+
+              <form onSubmit={this.handleSubmit} className="update-form">
+                <select value={this.state.size} onChange={this.handleChange('size')}>
+                  <option value="Size">Size</option>
+                  <option value="X-Small">X-Small</option>
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large">Large</option>
+                  <option value="X-Large">X-Large</option>
+                </select>
+                <select value={this.state.quantity} onChange={this.handleChange('quantity')}>
+                  <option value="Qty">Qty</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <input type="submit" value="UPDATE"></input>
+              </form>
+
+          </div>
         </div>
       );
     }

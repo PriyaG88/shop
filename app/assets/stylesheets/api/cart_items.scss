@@ -39,3 +39,27 @@
 .cart-item-btn:hover {
   background: #fff;
 }
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.8);
+  padding: 50px;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 5px;
+  top: 102px;
+  width: 768px;
+  min-height: 300px;
+  margin: 0 auto;
+  padding: 30;
+}
+
+.update-form {
+  
+}

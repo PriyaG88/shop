@@ -18,6 +18,7 @@ class CartIndex extends Component {
     this.setState(prevState => {
       return { isOpen: !prevState.isOpen };
     });
+    console.log('toggling');
   }
 
   render() {
