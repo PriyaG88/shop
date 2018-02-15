@@ -34,6 +34,7 @@
   border-radius: 2px;
   text-transform: uppercase;
   background: #f7f7f7;
+  cursor: pointer;
 }
 
 .cart-item-btn:hover {
@@ -47,7 +48,6 @@
   left: 0;
   right: 0;
   background-color: rgba(0,0,0,0.8);
-  padding: 50px;
 }
 
 .modal-content {
@@ -58,8 +58,9 @@
   min-height: 300px;
   margin: 0 auto;
   padding: 30;
+
 }
 
-.update-form {
-  
+.img-container {
+  display: inline-block;
 }
