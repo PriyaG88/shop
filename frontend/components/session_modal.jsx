@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { ButtonGroup, Button, Modal, Nav,
-  Row, Col, FormGroup }
-  from 'react-bootstrap';
+
 import { login } from '../actions/session_actions';
 
 class SessionModal extends Component {
@@ -14,14 +12,6 @@ class SessionModal extends Component {
       password: '',
       showModal: false
     };
-  }
-
-  close() {
-    this.setState({ showModal: false });
-  }
-
-  open() {
-    this.setState({ showModal: true });
   }
 
   handleChange(field) {
@@ -45,47 +35,7 @@ class SessionModal extends Component {
   render () {
     return (
       <div>
-        <span onClick={this.open.bind(this)}>LOG IN</span>
-
-        <Modal show={this.state.showModal} onHide={this.close.bind(this)}>
-          <Modal.Header closeButton>
-            <h2 className="modal-title">theShop</h2>
-            <Modal.Title className="modal-slogan">Your Account for everything Style</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <Row>
-              <form>
-                <FormGroup >
-                  <Row>
-                    <Col md={12}>
-                      <input className="session-input"
-                        type="email"
-                        placeholder="Email"
-                        value={this.state.email}
-                        onChange={this.handleChange('email')}/>
-                      <input className="session-input"
-                        type="password"
-                        placeholder="Password"
-                        value={this.state.password}
-                        onChange={this.handleChange('password')}/>
-                    </Col>
-                  </Row>
-                  <br />
-                  <Row>
-                    <ButtonGroup vertical block>
-                      <Button className="session-form-submit login-button"
-                        onClick={this.handleSubmit.bind(this)}>LOG IN</Button>
-                      <br />
-                      <Button className="session-form-submit signup-button">SIGN UP</Button>
-                    </ButtonGroup>
-                  </Row>
-                </FormGroup>
-              </form>
-            </Row>
-          </Modal.Body>
-          <Modal.Footer>
-          </Modal.Footer>
-        </Modal>
+        
       </div>
     );
   }
