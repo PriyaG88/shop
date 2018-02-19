@@ -48,8 +48,10 @@ class HeaderNav extends Component {
           {categories}
           <NavLink to="/cart" className="nav-links cart"><i className="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></NavLink>
           {this.state.loggedIn ? <button onClick={this.handleLogout}>Log Out</button>
-        : <button><SessionModal handleLogin={this.handleLogin}/></button>
+        : <button onClick={this.handleLogin}>Log In</button>
           }
+          {this.state.loggedIn && <SessionModal />}
+
         </ul>
       </nav>
     );
