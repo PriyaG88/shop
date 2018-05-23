@@ -10,7 +10,7 @@ class ProductShow extends Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchProduct(this.props.productId)
     .then(product => this.setState({product: product.payload}));
   }
